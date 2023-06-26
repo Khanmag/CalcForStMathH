@@ -90,6 +90,7 @@ const mainObj = {
         this.nodes[currentNum].innerText = this[currentNum]
     },
     setSymbol(content, option) {
+        // console.log('setSymbol start', this.currentAction)
         if (this.currentAction && this.secondNum) {
             const result = this.calculateResult()
             this.clearAll()
@@ -99,6 +100,7 @@ const mainObj = {
             this.nodes.currentSymbol.innerHTML = content
             this.currentAction = option
         }
+        // console.log('setSymbol end', this.currentAction)
     },
     clearAll() {
         this.firstNum = null
@@ -116,7 +118,7 @@ const mainObj = {
     deleteLastLatter() {
         const currentNum = this.currentAction ? 'secondNum' : 'firstNum'
         if (this[currentNum]) {
-            this[currentNum] = toString(this[currentNum]).slice(0, -1)
+            this[currentNum] = String(this[currentNum]).slice(0, -1)
             this.nodes[currentNum].innerText = this[currentNum]
         }
     },
