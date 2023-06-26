@@ -3,7 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+.calcMonitor > p:nth-child(1) {
+    background-color: lightblue;
+}
+.calcMonitor > p:nth-child(2) {
+    background-color: lightgreen;
+}
+.calcMonitor > p:nth-child(3) {
+    background-color: lightgrey;
+}
+.calcMonitor > p:nth-child(4) {
+    background-color: lightcoral;
+}
+.calcMonitor > p {
+    font-size: 50px;
+}
 
 .calc_wrapper {
     width: 375px;
