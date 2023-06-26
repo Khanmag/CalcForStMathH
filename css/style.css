@@ -3,6 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+main {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .calc_monitor {
     display: flex;
     flex-direction: column;
@@ -35,6 +43,7 @@
     background: #DFE2EB;
     padding: 0 18px 38px 19px;
     font-size: 21px;
+    border-radius: 10px;
 }
 
 .btns_wrapper {
@@ -49,6 +58,7 @@
     border: none;
     border-radius: 23px;
     position: relative;
+    font-size: 21px;
 }
 .btns_wrapper>button:active {
     transform: scale(0.95);
@@ -78,6 +88,33 @@
     filter: blur(1px);
     border-radius: 18px;
 }
+
+.orange_btn {
+    background: #D07419;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), inset 4px 4px 4px #D07419;
+    color: white;
+}
+.btns_wrapper > .orange_btn > span {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.orange_btn::after {
+    background: linear-gradient(134.24deg, #C15D17 15.47%, #DF8419 94.71%);
+    filter: blur(1px);
+    border-radius: 18px;
+}
+
+.white_btn {
+    background: #D0D3E2;
+    box-shadow: 4px 4px 4px 0px #DDE1EC inset, 3px 3px 10px 0px rgba(57, 62, 81, 0.24);
+}
+
+.white_btn::after {
+    background: linear-gradient(134deg, #CED2DE 0%, #ECEFF4 100%);
+    filter: blur(1px);
+    border-radius: 18px;
+} 
 .zero_btn {
     grid-column: span 2;
 }

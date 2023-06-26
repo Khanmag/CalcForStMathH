@@ -116,9 +116,7 @@ const mainObj = {
     deleteLastLatter() {
         const currentNum = this.currentAction ? 'secondNum' : 'firstNum'
         if (this[currentNum]) {
-            console.log(currentNum)
-            console.log(this[currentNum])
-            this[currentNum] = (this[currentNum] + "").slice(0, -1)
+            this[currentNum] = toString(this[currentNum]).slice(0, -1)
             this.nodes[currentNum].innerText = this[currentNum]
         }
     },
