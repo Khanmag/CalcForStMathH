@@ -3,20 +3,25 @@
     margin: 0;
     box-sizing: border-box;
 }
-.calcMonitor > p:nth-child(1) {
-    background-color: lightblue;
+.calc_monitor {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
 }
-.calcMonitor > p:nth-child(2) {
-    background-color: lightgreen;
+.calc_monitor > div {
+    display: flex;
+    color: #8695AE;
+    font-size: 28px;
 }
-.calcMonitor > p:nth-child(3) {
-    background-color: lightgrey;
+.calc_monitor > p:last-child {
+    color: #1D2028;
+    font-size: 56px;
 }
-.calcMonitor > p:nth-child(4) {
-    background-color: lightcoral;
-}
-.calcMonitor > p {
-    font-size: 50px;
+.calc_monitor > p::before {
+    content: '=';
+    position: relative;
+    right: 10px;
 }
 
 .calc_wrapper {

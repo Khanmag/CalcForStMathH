@@ -71,13 +71,14 @@ const mainObj = {
         this.nodes.secondNum = num2
         const result = document.createElement('p')
         this.nodes.result = result
+        const wrapper = document.createElement('div')
+        wrapper.append(num1, symbol, num2)
         const monitor = document.createElement('div')
-        monitor.className = 'calcMonitor'
-        monitor.append(num1, symbol, num2, result)
+        monitor.className = 'calc_monitor'
+        monitor.append(wrapper, result)
         container.append(monitor)
     },
     addNumber(num) {
-        console.log(this.currentAction)
         const currentNum = this.currentAction ? 'secondNum' : 'firstNum'
 
         if (num === '.') {
@@ -114,8 +115,12 @@ const mainObj = {
     },
     deleteLastLatter() {
         const currentNum = this.currentAction ? 'secondNum' : 'firstNum'
-        this[currentNum] = this[currentNum].slice(0, -1)
-        this.nodes[currentNum].innerText = this[currentNum]
+        if (this[currentNum]) {
+            console.log(currentNum)
+            console.log(this[currentNum])
+            this[currentNum] = (this[currentNum] + "").slice(0, -1)
+            this.nodes[currentNum].innerText = this[currentNum]
+        }
     },
     manageValues(option) {
         switch (option) {
